@@ -39,10 +39,10 @@ node{
                     git config user.email "keerthanakeerthu31.kk@gmail.com"
                     git config user.name "keerthana"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" manifests/deployment.yml
+                    sed -i "s/replaceImageTag/\${BUILD_NUMBER}/g" manifests/deployment.yml
                     git add manifests/deployment.yml
-                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GITHUB_USERNAME}/jenkins-project HEAD:main
+                    git commit -m "Update deployment image to version \${BUILD_NUMBER}"
+                    git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/${GITHUB_USERNAME}/jenkins-project HEAD:main
                 '''
             }
         }
