@@ -2,7 +2,7 @@
 
 A simple todo app project 
 
-![todo App](https://raw.githubusercontent.com/shreys7/django-todo/develop/staticfiles/todoApp.png)
+![Screenshot 2024-02-18 115419](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/Screenshot%202024-02-18%20115419.png)
 
 ## CICD Architecture [GitHub -> Jenkins -> k8s Manifests -> Argo CD -> k8s cluster]
 
@@ -20,7 +20,7 @@ Prerequisites:
 
 ### Jenkins Pipeline Stages
 
-
+![Screenshot 2024-02-18 114611](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/Screenshot%202024-02-18%20114611.png)
 
 ### Execute locally and access the application
 Make sure to install the dependencies of the project through the requirements.txt file.
