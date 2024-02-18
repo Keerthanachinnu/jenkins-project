@@ -32,7 +32,7 @@ node{
             '''
         }
     }
-    stage('Update Deployment File') {
+    stage('Update K8s manifest') {
         withCredentials([usernamePassword(credentialsId: 'github-creds', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USERNAME')]) {
             sh '''
                 git config user.email "keerthanakeerthu31.kk@gmail.com"
