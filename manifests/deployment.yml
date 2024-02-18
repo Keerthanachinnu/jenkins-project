@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todot-app
-        image: keerthanav123/todopythonapp:replaceImageTag
+        image: keerthanav123/todopythonapp:1
         ports:
         - containerPort: 8000
