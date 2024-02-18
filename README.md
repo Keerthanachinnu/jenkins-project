@@ -6,7 +6,7 @@ A simple todo app project
 
 ## CICD Architecture [GitHub -> Jenkins -> k8s Manifests -> Argo CD -> k8s cluster]
 
-![Screenshot 2023-02-01 at 2 48 06 PM](https://user-images.githubusercontent.com/43399466/216001659-74024e94-2c3c-4f1a-8e2e-3ef69b3a88ad.png)
+![Screenshot 2024-02-18 115514](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/Screenshot%202024-02-18%20115514.png)
 
 Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a Python application using SonarQube, Argo CD, Helm, and Kubernetes:
 
