@@ -2,7 +2,7 @@
 
 A simple todo app project 
 
-![screenshot_5](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_5.png)
+![screenshot_5](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_5.PNG)
 
 ## CICD Architecture [GitHub -> Jenkins -> k8s Manifests -> Argo CD -> k8s cluster]
 
