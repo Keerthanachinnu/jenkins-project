@@ -22,12 +22,7 @@ Prerequisites:
 
 ![screenshot_2](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_2.PNG)
 
-### SonarQube Analysis for Code Quality
-
-![screenshot_1](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_1.PNG)
-
 ### Explanation of each stage in the Jenkins pipeline script
-
 Checkout: Checks out the source code from a GitHub repository.
 
 Build and Test: Install dependencies, runs tests, and ensures the Python application's functionality.
