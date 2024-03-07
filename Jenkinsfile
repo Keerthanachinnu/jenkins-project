@@ -1,4 +1,4 @@
-def label = "mypod-${UUID.randomUUID().toString()}"
+def label = "newpod-${UUID.randomUUID().toString()}"
 podTemplate(label: label, containers: [
 containerTemplate(name: 'python', image: 'python:3.11', ttyEnabled: true, command: 'cat'),
 containerTemplate(name: 'maven', image: 'maven:3.8-openjdk-11', ttyEnabled: true, command: 'cat'),
