@@ -1,9 +1,5 @@
 ### Jenkins Pipeline for Simple Todo Python based application using SonarQube, Argo CD, Helm and Kubernetes
 
-A simple todo app project 
-
-![screenshot_5](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_5.PNG)
-
 ## CICD Architecture [GitHub -> Jenkins -> k8s Manifests -> Argo CD -> k8s cluster]
 
 ![screenshot_3](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_3.png)
@@ -54,6 +50,10 @@ Log in to ArgoCD using the default username and password. Retrieve the default p
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
+
+A simple todo app project 
+
+![screenshot_5](https://github.com/Keerthanachinnu/jenkins-project/blob/main/images/screenshot_5.PNG)
 
 ### Execute locally and access the application
 Make sure to install the dependencies of the project through the requirements.txt file.
