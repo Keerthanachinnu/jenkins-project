@@ -87,7 +87,7 @@ containerTemplate(name: 'kubectl', image: 'smesch/kubectl', ttyEnabled: true, co
                                 sh '''
                                     APP_NAME=$(basename $GITHUB_REPO_URL .git)-$GITHUB_BRANCH
                                     argocd repo add --upsert $GITHUB_REPO_URL --username root --password $PERSONAL_ACCESS_TOKEN --plaintext --server <YOUR ARGOCD SERVER>
-                                    argocd app create $APP_NAME --repo $GITHUB_REPO_URL --revision $GITHUB_BRANCH --path ./manifests/  --dest-server https://kubernetes.default.svc --dest-namespace ethan --kustomize-image myImage=$CONT_REGISTRY --server <YOUR ARGOCD SERVER> --auth-token=$ARGOCD_AUTH_TOKEN --plaintext --upsert                                      
+                                    argocd app create $APP_NAME --repo $GITHUB_REPO_URL --revision $GITHUB_BRANCH --path ./manifests/  --dest-server https://kubernetes.default.svc --kustomize-image myImage=$CONT_REGISTRY --server <YOUR ARGOCD SERVER> --auth-token=$ARGOCD_AUTH_TOKEN --plaintext --upsert                                      
                                     argocd app sync $APP_NAME --plaintext --prune --server <YOUR ARGOCD SERVER>
                                     argocd app set $APP_NAME --sync-policy automated --auto-prune --plaintext --server <YOUR ARGOCD SERVER>
                                 '''    
@@ -103,7 +103,7 @@ containerTemplate(name: 'kubectl', image: 'smesch/kubectl', ttyEnabled: true, co
                             sh '''
                                 APP_NAME=$(basename $GITHUB_REPO_URL .git)-$GITHUB_BRANCH
                                 argocd repo add --upsert $GITHUB_REPO_URL --username root --password $PERSONAL_ACCESS_TOKEN --plaintext --server <YOUR ARGOCD SERVER>
-                                argocd app create $APP_NAME --repo $GITHUB_REPO_URL --revision $GITHUB_BRANCH --path ./manifests/  --dest-server https://kubernetes.default.svc --dest-namespace ethan --kustomize-image myImage=$CONT_REGISTRY --server <YOUR ARGOCD SERVER> --auth-token=$ARGOCD_AUTH_TOKEN --plaintext --upsert                                      
+                                argocd app create $APP_NAME --repo $GITHUB_REPO_URL --revision $GITHUB_BRANCH --path ./manifests/  --dest-server https://kubernetes.default.svc --kustomize-image myImage=$CONT_REGISTRY --server <YOUR ARGOCD SERVER> --auth-token=$ARGOCD_AUTH_TOKEN --plaintext --upsert                                      
                                 argocd app sync $APP_NAME --plaintext --prune --server <YOUR ARGOCD SERVER>
                                 argocd app set $APP_NAME --sync-policy automated --auto-prune --plaintext  --server <YOUR ARGOCD SERVER>                                    
                             '''        
@@ -118,7 +118,7 @@ containerTemplate(name: 'kubectl', image: 'smesch/kubectl', ttyEnabled: true, co
                         sh '''
                             APP_NAME=$(basename $GITHUB_REPO_URL .git)-$GITHUB_BRANCH
                             argocd repo add --upsert $GITHUB_REPO_URL --username root --password $PERSONAL_ACCESS_TOKEN --plaintext --server <YOUR ARGOCD SERVER>
-                            argocd app create $APP_NAME --repo $GITHUB_REPO_URL --revision $GITHUB_BRANCH --path ./manifests/  --dest-server https://kubernetes.default.svc --dest-namespace ethan --kustomize-image myImage=$CONT_REGISTRY --server <YOUR ARGOCD SERVER> --auth-token=$ARGOCD_AUTH_TOKEN --plaintext --upsert                                      
+                            argocd app create $APP_NAME --repo $GITHUB_REPO_URL --revision $GITHUB_BRANCH --path ./manifests/  --dest-server https://kubernetes.default.svc --kustomize-image myImage=$CONT_REGISTRY --server <YOUR ARGOCD SERVER> --auth-token=$ARGOCD_AUTH_TOKEN --plaintext --upsert                                      
                             argocd app sync $APP_NAME --plaintext --prune --server <YOUR ARGOCD SERVER>
                             argocd app set $APP_NAME --sync-policy automated --auto-prune --plaintext  --server <YOUR ARGOCD SERVER>                                 
                         '''    
